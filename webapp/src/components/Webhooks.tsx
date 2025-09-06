@@ -11,6 +11,9 @@ import { RJSFSchema } from '@rjsf/utils';
 export default function Webhooks() {
   const { webhooks, setWebhooks } = useContext(TanaHelperContext)
   // const [schema, setSchema] = useState<RJSFSchema>({})
+  // Temporary minimal schema/config so the form renders without errors
+  const schema: RJSFSchema = { type: 'object', properties: {} };
+  const config: any = {};
 
   useEffect(() => {
     (document.querySelector('#root') as HTMLElement)?.style.setProperty('overflow', 'scroll');
@@ -98,8 +101,7 @@ export default function Webhooks() {
                 </Typography>
               </div>
             );
-          
-          }
+          })}
         </List>
         <Form
           schema={schema}
