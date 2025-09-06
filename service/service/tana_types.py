@@ -25,8 +25,11 @@ class Props(BaseModel):
 class NodeDump(BaseModel):
   id: str
   props: Props
-  touchCounts: Optional[List[int]] = None
-  modifiedTs: Optional[List[int]] = None
+  # These rarely used metadata fields may appear in multiple formats
+  # (lists, dicts, or even JSON-encoded strings). Accept broad types to avoid
+  # validation errors when importing Tana exports.
+  touchCounts: Optional[Union[List[int], Dict[str, int], str]] = None
+  modifiedTs: Optional[Union[List[int], Dict[str, int], str]] = None
   children: Optional[List[str]] = None
   associationMap: Optional[Dict[str, str]] = None
   underConstruction: Optional[bool] = None
