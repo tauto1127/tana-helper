@@ -7,7 +7,6 @@
     "type": "git",
     "url": "https://github.com/verveguy/tana-helper"
   },
-  "private": false,
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.6",
@@ -34,7 +33,7 @@
     "xterm-addon-fit": "^0.8.0"
   },
   "scripts": {
-    "build": "rimraf dist && node esbuild.config.mjs && cp -rp dist/* ../service/service/dist",
+    "build": "rimraf dist && node esbuild.config.mjs",
     "watch": "watch 'yarn build' ./src"
   },
   "eslintConfig": {
