@@ -13,6 +13,7 @@ import ForceGraph3D from 'react-force-graph-3d';
 import ForceGraph2D from 'react-force-graph-2d';
 import { TanaHelperContext } from "../TanaHelperContext";
 import { useDimensions } from "./utils";
+import ColorLegend from './ColorLegend';
 import './Visualizer.css';
 
 export default function Visualizer() {
@@ -55,6 +56,7 @@ export default function Visualizer() {
     // container is sized, and we need to know the size of the container to render the graph.
     return (
       <div className="graph-container" ref={containerRef}>
+        <ColorLegend />
         <div className="abs-container" >
           { twoDee ?
             <ForceGraph2D ref={fgRef}

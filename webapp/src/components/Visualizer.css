@@ -15,10 +15,38 @@
   width: 100%;
   padding: 0px;
   overflow: hidden;
+  position: relative;
 }
 
 /* This one is needed to house the fixed-size graph */
 .abs-container {
   position: absolute;
   height: inherit;
+}
+
+.color-legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  margin-right: 4px;
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
 }
