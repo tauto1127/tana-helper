@@ -2,7 +2,9 @@
 
 Inspired by the marketing visualization on the Tana.inc website, `tana-helper` provides a 3D visualization of your Tana workspace.
 
-Check out this [video demo](https://share.cleanshot.com/VY0zm55s) and this 
+Check out this [video demo](https://share.cleanshot.com/VY0zm55s) and this
+
+The visualizer displays nodes in the color of their associated tags and now includes a legend explaining the color assignments.
 
 ## Building
 
